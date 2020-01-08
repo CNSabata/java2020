@@ -16,8 +16,6 @@ public class Admin {
 		personne.afficherIdentite();
 		personne.afficherAdresse();
 		
-		System.out.println();
-		
 		Entreprise entreprise = new Entreprise(124, 2010);
 		entreprise.setDenomination("MonEntreprise");
 		entreprise.setNumeroSiret(1234567890);

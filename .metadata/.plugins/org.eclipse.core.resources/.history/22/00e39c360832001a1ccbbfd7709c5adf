@@ -5,7 +5,7 @@ public class Entreprise extends Client {
 	private String denomination;
 	
 	
-	public int getNumeroSiret() {
+	public String getNumeroSiret() {
 		return numeroSiret;
 	}
 

@@ -1,17 +1,17 @@
 package fr.demo;
 
 public class Entreprise extends Client {
-	private int numeroSiret;
+	private String numeroSiret;
 	private String denomination;
 	
 	
-	public int getNumeroSiret() {
+	public String getNumeroSiret() {
 		return numeroSiret;
 	}
 
 
-	public void setNumeroSiret(int i) {
-		this.numeroSiret = i;
+	public void setNumeroSiret(String numeroSiret) {
+		this.numeroSiret = numeroSiret;
 	}
 
 
@@ -24,9 +24,6 @@ public class Entreprise extends Client {
 		this.denomination = denomination;
 	}
 
-	public void afficherIdentite() {
-		System.out.println(denomination + " " + numeroSiret);
-	}
 
 	public Entreprise(int id, int annee) {
 		super(id, annee);
