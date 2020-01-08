@@ -1,0 +1,10 @@
+package fr.demo;
+
+public class Personne extends Client {
+
+	public Personne(int id, int annee) {
+		super(id, annee);
+		// TODO Auto-generated constructor stub
+	}
+
+}
