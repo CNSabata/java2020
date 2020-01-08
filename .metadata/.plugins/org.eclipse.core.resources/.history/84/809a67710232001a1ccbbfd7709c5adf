@@ -1,0 +1,11 @@
+package fr.demo;
+
+public class Personne {
+	private int identifiant;
+	private int anneeInscription;
+	
+	public Personne(int id, int annee) {
+		identifiant = id;
+		anneeInscription = annee;
+	}
+}

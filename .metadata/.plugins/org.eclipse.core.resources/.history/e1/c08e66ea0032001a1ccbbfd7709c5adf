@@ -1,0 +1,12 @@
+package fr.demo;
+
+public class Admin {
+
+	public static void main(String[] args) {
+		Personne personne = new Personne();
+		
+		System.out.println(personne.identifiant);
+		System.out.println(personne.anneeInscription);
+	}
+
+}

@@ -1,0 +1,35 @@
+package fr.java.hello;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		System.out.println("Bonjour le monde");
+		testDesTypesPrimitifs();
+	}
+
+	private static void testDesTypesPrimitifs() {
+		// Un nom de variable commence par une lettre
+		// Peut contenir des lettres ou des nombres ou _ ou $
+
+		// Variables : type Nom = Maximum
+		// type.MAX_VALUE; Pour les max
+		// Out of range; prendre le L pour interpréter en litéral
+		
+		// Entier sur un octet
+		byte entierSurUnOctet = 127; // -128
+		System.out.println(entierSurUnOctet);
+		
+		// Entier court
+		short unCourt = 32767; 
+		System.out.println(unCourt);
+		
+		// Entier
+		int vitesse = 2147483647;
+		System.out.println(vitesse);
+		
+		// Entier long
+		long max = 9223372036854775807L;
+		System.out.println(max);
+	}
+
+}
