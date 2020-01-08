@@ -20,7 +20,6 @@ public class Personne extends Client {
 		this.prenom = prenom;
 	}
 	
-	@Override
 	public void afficherIdentite() {
 		System.out.println(prenom + " " + nom);
 	}

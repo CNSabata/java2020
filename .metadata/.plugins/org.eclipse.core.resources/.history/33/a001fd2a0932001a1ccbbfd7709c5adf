@@ -1,6 +1,6 @@
 package fr.demo;
 
-public abstract class Client {
+public class Client {
 	private int identifiant;
 	private int anneeInscription;
 	private String rue;
@@ -47,6 +47,5 @@ public abstract class Client {
 		System.out.println(rue + "\n" + ville);
 	}
 	
-	public abstract void afficherIdentite();
 	
 }

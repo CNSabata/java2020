@@ -24,7 +24,6 @@ public class Entreprise extends Client {
 		this.denomination = denomination;
 	}
 
-	@Override
 	public void afficherIdentite() {
 		System.out.println(denomination + " " + numeroSiret);
 	}
