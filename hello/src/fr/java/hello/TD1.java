@@ -11,8 +11,8 @@ public class TD1 {
 		// testExercice4();
 		// testExercice5();
 		// testExercice6();
-		testExercice7();
-		// testExercice8();
+		// testExercice7();
+		testExercice8();
 	}
 
 	private static void testExercice8() {
@@ -26,9 +26,9 @@ public class TD1 {
 		double invMoney = scan.nextDouble();
 		System.out.println();
 		
-		double invLeft = invAmount - invMoney;
+		double invLeft = invMoney - invAmount;
 		
-		if (invLeft > 0) {
+		if (invLeft < 0) {
 			System.out.println("Saisie invalide");
 		} else {
 			// Euros
