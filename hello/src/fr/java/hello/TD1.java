@@ -12,64 +12,104 @@ public class TD1 {
 		// testExercice5();
 		// testExercice6();
 		testExercice7();
+		// testExercice8();
 	}
-	
+
+	private static void testExercice8() {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Entrer une valeur de produit : ");
+		double invAmount = scan.nextDouble();
+		System.out.println();
+		
+		System.out.print("Entrer une somme de paiement : ");
+		double invMoney = scan.nextDouble();
+		System.out.println();
+		
+		double invLeft = invAmount - invMoney;
+		
+		if (invLeft > 0) {
+			System.out.println("Saisie invalide");
+		} else {
+			// Euros
+			int e500 = (int)(invLeft / 500); invLeft -= e500 * 500; 
+			int e100 = (int)(invLeft / 100); invLeft -= e100 * 100; 
+			int e50 = (int)(invLeft / 50);   invLeft -= e50 * 50;   
+			int e20 = (int)(invLeft / 20);   invLeft -= e20 * 20;   
+			int e10 = (int)(invLeft / 10);   invLeft -= e10 * 10;   
+			int e5 = (int)(invLeft / 5);     invLeft -= e5 * 5;     
+			int e2 = (int)(invLeft / 2);     invLeft -= e2 * 2;     
+			int e = (int)invLeft;            invLeft -= e;          
+			
+			// Centimes
+			invLeft *= 100;
+			int c50 = (int)invLeft / 50;     invLeft -= c50 * 50;   
+			int c20 = (int)invLeft / 20;     invLeft -= c20 * 20;   
+			int c10 = (int)invLeft / 10;     invLeft -= c10 * 10;   
+			int c5 = (int)invLeft / 5;       invLeft -= c5 * 5;     
+			int c2 = (int)invLeft / 2;       invLeft -= c2 * 2;     
+			int c = (int)invLeft;                                   
+			
+			// Printer
+			System.out.println("Voici votre monnaie :");
+			
+			// Euros
+			if (e500 != 0){System.out.println(e500 + " billet(s) de 500€.");}
+			if (e100 != 0){System.out.println(e100 + " billet(s) de 100€.");}
+			if (e50  != 0){System.out.println(e50  + " billet(s) de 50€.");}
+			if (e20  != 0){System.out.println(e20  + " billet(s) de 20€.");}
+			if (e10  != 0){System.out.println(e10  + " billet(s) de 10€.");}
+			if (e5   != 0){System.out.println(e5   + " billet(s) de 5€.");}
+			if (e2   != 0){System.out.println(e2   + " pièce(s) de 2€.");}
+			if (e    != 0){System.out.println(e    + " pièce(s) de 1€.");}
+			
+			// Centimes
+			if (c50  != 0){System.out.println(c50  + " pièce(s) de 0.50€.");}
+			if (c20  != 0){System.out.println(c20  + " pièce(s) de 0.20€.");}
+			if (c10  != 0){System.out.println(c10  + " pièce(s) de 0.10€.");}
+			if (c5   != 0){System.out.println(c5   + " pièce(s) de 0.05€.");}
+			if (c2   != 0){System.out.println(c2   + " pièce(s) de 0.02€.");}
+			if (c    != 0){System.out.println(c    + " pièce(s) de 0.01€.");}
+		}
+		
+	}
+
 	private static void testExercice7() {
-        int i, space, rows, k=0;
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter un nombre of lignes : ");
-        rows = scan.nextInt();
-        String str1 = "  ";
-        String str2 = "* ";
-        
-        List<String> pyramid = new ArrayList<>();
-        
-        // Pyramide dans le bon sens
-        for(i=1; i<=rows; i++){
-            for(space=1; space<=(rows-i); space++)
-            {
-                System.out.print(str1);
-                pyramid.add(str1);
-            }
-            while(k != (2*i-1))
-            {
-                System.out.print(str2);
-                pyramid.add(str2);
-                k++;
-            }
-            k = 0;
-            pyramid.add("NL");
-            System.out.println();
-        }
-        
-        // Pyramide inversée
-        
-        List<String> revPyramid = new ArrayList<>();
-        
-        pyramid.forEach(
-        		(var) -> {	String concatStr = "";
-        					if(var.equals(str1) || var.equals(str2)) {
-        						concatStr = concatStr + var;
-        						revPyramid.add(concatStr);
-        						
-        					} 
-        					else if(var.equals("NL")) {
-        						concatStr = "";
-        						revPyramid.add(var);
-        					} 
-        				}
-        			);
-        
-        Collections.reverse(revPyramid);
-        revPyramid.forEach((var) -> {
-        	if(!var.equals("NL")) {
-        		System.out.print(var);
-        	} else if (var.equals("NL")) {
-        		System.out.println();
-        	}
-        	
-        });
-        
+		// if (x % 2 == 0) pair else impair
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Entrer un nombre de lignes : ");
+		
+		int lignes = scan.nextInt();
+		String star = "*"; // str.repeat(nb);
+		String space = " "; // Idem
+		ArrayList<Integer> odds = new ArrayList<Integer>();
+		
+		for (int i = 1; odds.size() != lignes; i++) {
+		   if (i % 2 != 0) {
+			   odds.add(i);
+		   }
+		}
+		
+		int j = 1;
+		for (int i = lignes; i > 0; i--) {
+			System.out.print(space.repeat(i - 1)); // Espace
+			System.out.print(star.repeat(odds.get(j - 1))); // Etoile
+			j++;
+			System.out.println(); // Ligne
+		}
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<Integer> oddsRev = (ArrayList<Integer>) odds.clone();
+		Collections.reverse(oddsRev);
+		
+		for (int i = 1; i <= lignes; i++) {
+			System.out.print(space.repeat(i - 1)); // Espace
+			System.out.print(star.repeat(oddsRev.get(i - 1))); // Etoile
+			System.out.println(); // Ligne
+		}
+		
+		
 	}
 
 	private static void testExercice6() {

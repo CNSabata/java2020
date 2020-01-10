@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="scan"/>
+		<item key="selection" value="c"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="scan5"/>
-			<item value="scan4"/>
-			<item value="scan3"/>
-			<item value="scan2"/>
-			<item value="scan1"/>
+			<item value="oneCent"/>
+			<item value="twoCents"/>
+			<item value="c2"/>
+			<item value="fiveCents"/>
+			<item value="tenCents"/>
+			<item value="twentyCents"/>
+			<item value="fiftyCents"/>
+			<item value="oneEuro"/>
+			<item value="twoEuros"/>
+			<item value="fiveEuros"/>
+			<item value="tenEuros"/>
+			<item value="twentyEuros"/>
+			<item value="fiftyEuros"/>
+			<item value="e50"/>
+			<item value="oneHundredEuros"/>
 		</list>
 		<list key="replacehistory">
-			<item value="scan"/>
+			<item value="c"/>
+			<item value="c2"/>
+			<item value=""/>
+			<item value="c5"/>
+			<item value="c10"/>
+			<item value="c20"/>
+			<item value="c50"/>
+			<item value="e"/>
+			<item value="e2"/>
+			<item value="e5"/>
+			<item value="e10"/>
+			<item value="e20"/>
+			<item value="e50"/>
+			<item value="e100"/>
+			<item value="invLeft"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
