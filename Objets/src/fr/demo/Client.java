@@ -3,23 +3,14 @@ package fr.demo;
 public abstract class Client {
 	private int identifiant;
 	private int anneeInscription;
-	private String rue;
-	private String ville;
+	private Adresse adresse;
 
-	public String getRue() {
-		return rue;
+	public Adresse getAdresse() {
+		return adresse;
 	}
 
-	public void setRue(String rue) {
-		this.rue = rue;
-	}
-
-	public String getVille() {
-		return ville;
-	}
-
-	public void setVille(String ville) {
-		this.ville = ville;
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
 	}
 
 	public Client(int id, int annee) {
@@ -41,10 +32,6 @@ public abstract class Client {
 
 	public void setAnneeInscription(int anneeInscription) {
 		this.anneeInscription = anneeInscription;
-	}
-	
-	public void afficherAdresse() {
-		System.out.println(rue + "\n" + ville);
 	}
 	
 	public abstract void afficherIdentite();

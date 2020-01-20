@@ -7,25 +7,27 @@ public class Admin {
 		personne.setAnneeInscription(2000);
 		personne.setNom("Wayne");
 		personne.setPrenom("John");
-		personne.setRue("45 rue Jean Jaures");
-		personne.setVille("87000 Limoges");
+		Adresse adressePers = new Adresse("45 rue Jean Jaurès", "87000 Limoges");
+		personne.setAdresse(adressePers);
+		
+		if(personne.getAdresse() != null)
+			personne.getAdresse().afficherAdressePostale();
 		
 //		System.out.println(personne.getIdentifiant());
 //		System.out.println(personne.getAnneeInscription());
 		
 		personne.afficherIdentite();
-		personne.afficherAdresse();
 		
 		System.out.println();
 		
 		Entreprise entreprise = new Entreprise(124, 2010);
 		entreprise.setDenomination("MonEntreprise");
 		entreprise.setNumeroSiret(1234567890);
-		entreprise.setRue("12 Place de la République");
-		entreprise.setVille("87000 Limoges");
+		entreprise.setAdresse(new Adresse("33 rue Balzac", "87000 Limoges"));
 		
 		entreprise.afficherIdentite();
-		entreprise.afficherAdresse();
+		if(entreprise.getAdresse() != null)
+			entreprise.getAdresse().afficherAdressePostale();
 	}
 
 }
