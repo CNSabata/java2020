@@ -162,7 +162,9 @@ public class ProductLineDAO<T> extends DAO<ProductLine> {
 		try (Statement stmt = connection.createStatement();
 				ResultSet res = stmt.executeQuery(REQUEST_SELECT_ALL);) {
 			while (res.next()) {
-				productLines.add(new ProductLine(res.getString("productLine"), res.getString("textDescription"),
+				productLines.add(new ProductLine(
+						res.getString("productLine"),
+						res.getString("textDescription"),
 						res.getString("htmlDescription"), null));
 			}
 		} catch (SQLException e) {
