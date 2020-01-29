@@ -1,6 +1,0 @@
-package fr.demo;
-
-public class Personne {
-	public int identifiant;
-	public int anneeInscription;
-}
