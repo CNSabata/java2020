@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_aEP10Da7EeqtNKGImJCP8Q" name="Papyrus" visibility="public">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_aIQzIDa7EeqtNKGImJCP8Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_2hxqYDtxEeqrzLPAx_LicA" name="ICaisse">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xCx1oDtyEeqrzLPAx_LicA" name="getTotal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0WzyMDtyEeqrzLPAx_LicA" name="afficherContenu"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3zX_sDtyEeqrzLPAx_LicA" name="afficherRenduMonnaie"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_96E4MDtyEeqrzLPAx_LicA" name="ajouterArgent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-3aDIDtyEeqrzLPAx_LicA" name="retirerArgent"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_6Lwo0DtxEeqrzLPAx_LicA" name="Administrable">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_thijgDtyEeqrzLPAx_LicA" name="verifierCoherence"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8Vy3cDtxEeqrzLPAx_LicA" name="Caisse">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EZgZwDtzEeqrzLPAx_LicA" name="infoMonnaie" type="_PKNYsDtyEeqrzLPAx_LicA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rF4HcDt0EeqrzLPAx_LicA" name="compartiment" type="__d6e8DtxEeqrzLPAx_LicA" aggregation="composite" association="_rF25UDt0EeqrzLPAx_LicA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rF4HcTt0EeqrzLPAx_LicA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rF4Hcjt0EeqrzLPAx_LicA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pi5qQDufEeqEQevAOfEuLw" name="getCompartiment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wWs5UDufEeqEQevAOfEuLw" type="__d6e8DtxEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_97SOkDtxEeqrzLPAx_LicA" name="Comptable"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__d6e8DtxEeqrzLPAx_LicA" name="Compartiment">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r1N5sjt0EeqrzLPAx_LicA" name="argent" type="_TT5K4DtyEeqrzLPAx_LicA" association="_r1NSoDt0EeqrzLPAx_LicA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r1OgwDt0EeqrzLPAx_LicA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r1OgwTt0EeqrzLPAx_LicA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nwbnEDufEeqEQevAOfEuLw" name="getArgent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nwbnETufEeqEQevAOfEuLw" name="argent" type="_TT5K4DtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_AuMbEDtyEeqrzLPAx_LicA" name="IFondDeCaisse">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_O7-6ADtzEeqrzLPAx_LicA" name="getInfoMonnaie">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YNXl0DtzEeqrzLPAx_LicA" type="_PKNYsDtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QabN8DtzEeqrzLPAx_LicA" name="getArgent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_erNL8DtzEeqrzLPAx_LicA" name="argent" type="_TT5K4DtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HO2EoDtyEeqrzLPAx_LicA" name="AFondDeCaisse" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fSFwUDt0EeqrzLPAx_LicA" name="argent" type="_TT5K4DtyEeqrzLPAx_LicA" association="_fSD7IDt0EeqrzLPAx_LicA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fSGXYDt0EeqrzLPAx_LicA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fSGXYTt0EeqrzLPAx_LicA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7GdEkDtzEeqrzLPAx_LicA" name="getArgent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7GdEkTtzEeqrzLPAx_LicA" name="argent" type="_TT5K4DtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JBu-kDtyEeqrzLPAx_LicA" name="FondDeCaisseFR">
+    <generalization xmi:type="uml:Generalization" xmi:id="_AZ5UIDt0EeqrzLPAx_LicA" general="_HO2EoDtyEeqrzLPAx_LicA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8UsZUDtzEeqrzLPAx_LicA" name="getInfoMonnaie">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8UsZUTtzEeqrzLPAx_LicA" type="_PKNYsDtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LELXcDtyEeqrzLPAx_LicA" name="FondDeCaisseUS">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BGUVQDt0EeqrzLPAx_LicA" general="_HO2EoDtyEeqrzLPAx_LicA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8f8nEDtzEeqrzLPAx_LicA" name="getInfoMonnaie">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8f8nETtzEeqrzLPAx_LicA" type="_PKNYsDtyEeqrzLPAx_LicA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_PKNYsDtyEeqrzLPAx_LicA" name="IInfoMonnaie">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_iEmJoDtzEeqrzLPAx_LicA" name="getDevise">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p_RhMDtzEeqrzLPAx_LicA" name="devise" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_i7cSEDtzEeqrzLPAx_LicA" name="getTypesBillet">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_webV8DtzEeqrzLPAx_LicA" name="typeBillet" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kIQqgDtzEeqrzLPAx_LicA" name="getTypesPiece">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1e4_IDtzEeqrzLPAx_LicA" name="typePiece" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Q_KIIDtyEeqrzLPAx_LicA" name="InfoMonnaie"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TT5K4DtyEeqrzLPAx_LicA" name="Argent" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZMv0oDtyEeqrzLPAx_LicA" name="valeur" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Zzo1gDtyEeqrzLPAx_LicA" name="nom" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UTGlIDtyEeqrzLPAx_LicA" name="Billet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ZO4QsDt0EeqrzLPAx_LicA" general="_TT5K4DtyEeqrzLPAx_LicA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WbCiADtyEeqrzLPAx_LicA" name="Piece">
+    <generalization xmi:type="uml:Generalization" xmi:id="_aErQQDt0EeqrzLPAx_LicA" general="_TT5K4DtyEeqrzLPAx_LicA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_DA7n0Dt0EeqrzLPAx_LicA" client="_HO2EoDtyEeqrzLPAx_LicA" supplier="_8Vy3cDtxEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_FV-MkDt0EeqrzLPAx_LicA" client="_Q_KIIDtyEeqrzLPAx_LicA" supplier="_PKNYsDtyEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Jc1UQDt0EeqrzLPAx_LicA" client="_AuMbEDtyEeqrzLPAx_LicA" supplier="_PKNYsDtyEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_TMTqQDt0EeqrzLPAx_LicA" client="_8Vy3cDtxEeqrzLPAx_LicA" supplier="_AuMbEDtyEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_Ve0fcDt0EeqrzLPAx_LicA" client="_8Vy3cDtxEeqrzLPAx_LicA" supplier="_2hxqYDtxEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_WPK-UDt0EeqrzLPAx_LicA" client="_8Vy3cDtxEeqrzLPAx_LicA" supplier="_6Lwo0DtxEeqrzLPAx_LicA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fSD7IDt0EeqrzLPAx_LicA" memberEnd="_fSFwUDt0EeqrzLPAx_LicA _fSGXYjt0EeqrzLPAx_LicA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fSFJQDt0EeqrzLPAx_LicA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fSFJQTt0EeqrzLPAx_LicA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fSGXYjt0EeqrzLPAx_LicA" name="afonddecaisse" type="_HO2EoDtyEeqrzLPAx_LicA" association="_fSD7IDt0EeqrzLPAx_LicA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l0r6oDt0EeqrzLPAx_LicA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rF25UDt0EeqrzLPAx_LicA" memberEnd="_rF4HcDt0EeqrzLPAx_LicA _rF4ugDt0EeqrzLPAx_LicA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rF3gYDt0EeqrzLPAx_LicA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rF3gYTt0EeqrzLPAx_LicA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rF4ugDt0EeqrzLPAx_LicA" name="caisse" type="_8Vy3cDtxEeqrzLPAx_LicA" association="_rF25UDt0EeqrzLPAx_LicA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_r1NSoDt0EeqrzLPAx_LicA" memberEnd="_r1N5sjt0EeqrzLPAx_LicA _r1Ogwjt0EeqrzLPAx_LicA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_r1N5sDt0EeqrzLPAx_LicA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_r1N5sTt0EeqrzLPAx_LicA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_r1Ogwjt0EeqrzLPAx_LicA" name="compartiment" type="__d6e8DtxEeqrzLPAx_LicA" association="_r1NSoDt0EeqrzLPAx_LicA"/>
+  </packagedElement>
+</uml:Model>
