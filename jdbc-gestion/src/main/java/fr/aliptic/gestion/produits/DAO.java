@@ -1,7 +1,6 @@
 package fr.aliptic.gestion.produits;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.util.List;
 
 
