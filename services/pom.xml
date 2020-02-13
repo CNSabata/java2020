@@ -48,7 +48,11 @@
 		<dependency>
 		  <groupId>fr.timgroup.formation.aliptic.java</groupId>
   		  <artifactId>gestion</artifactId>
+<<<<<<< HEAD
   		  <version>0.0.2-SNAPSHOT</version>
+=======
+  		  <version>0.0.1-SNAPSHOT</version>
+>>>>>>> dea54a61a5c8092fcad515f3f559765d2e229d54
 		</dependency>
 	</dependencies>
 

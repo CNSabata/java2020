@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_FASrIDuuEeqwwNipfH27ew" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_FA358DuuEeqwwNipfH27ew">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mi6GMDuuEeqwwNipfH27ew" name="Billet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_mi6GMTuuEeqwwNipfH27ew" general="_mi6tQDuuEeqwwNipfH27ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mi6tQDuuEeqwwNipfH27ew" name="Argent" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mi6tQzuuEeqwwNipfH27ew" name="valeur" visibility="protected" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mi6tRDuuEeqwwNipfH27ew" name="nom" visibility="protected" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mi7UUDuuEeqwwNipfH27ew" name="Piece">
+    <generalization xmi:type="uml:Generalization" xmi:id="_mi7UUTuuEeqwwNipfH27ew" general="_mi6tQDuuEeqwwNipfH27ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2oqo0DuuEeqwwNipfH27ew" name="FondDeCaisseFR">
+    <generalization xmi:type="uml:Generalization" xmi:id="_2oqo0TuuEeqwwNipfH27ew" general="_2or28DuuEeqwwNipfH27ew"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2oqo0juuEeqwwNipfH27ew" name="getInfoMonnaie"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2orP4DuuEeqwwNipfH27ew" name="FondDeCaisseUS">
+    <generalization xmi:type="uml:Generalization" xmi:id="_2orP4TuuEeqwwNipfH27ew" general="_2or28DuuEeqwwNipfH27ew"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2orP4juuEeqwwNipfH27ew" name="getInfoMonnaie"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2or28DuuEeqwwNipfH27ew" name="AFondDeCaisse" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F8ZRkDuvEeqwwNipfH27ew" name="argent" type="_mi6tQDuuEeqwwNipfH27ew" association="_F8VnMDuvEeqwwNipfH27ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F8bGwDuvEeqwwNipfH27ew"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F8eKEDuvEeqwwNipfH27ew" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2or29DuuEeqwwNipfH27ew" name="getArgent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IINzcDuwEeqwwNipfH27ew" name="getInfoMonnaie">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OPq54DuwEeqwwNipfH27ew" type="_wYywwDuvEeqwwNipfH27ew" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F8VnMDuvEeqwwNipfH27ew" memberEnd="_F8ZRkDuvEeqwwNipfH27ew _F8gmUDuvEeqwwNipfH27ew">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F8XcYDuvEeqwwNipfH27ew" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F8YDcDuvEeqwwNipfH27ew" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F8gmUDuvEeqwwNipfH27ew" name="afonddecaisse" type="_2or28DuuEeqwwNipfH27ew" association="_F8VnMDuvEeqwwNipfH27ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JvVXsDuvEeqwwNipfH27ew"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wYywwDuvEeqwwNipfH27ew" name="InfoMonnaie">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3Mq4UDuvEeqwwNipfH27ew" name="devise">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CeSWgDuwEeqwwNipfH27ew" name="typesBillet"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EZk-gDuwEeqwwNipfH27ew" name="typesPieces"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zMrNoDuvEeqwwNipfH27ew" name="getDevise">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zMrNoTuvEeqwwNipfH27ew" name="return" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zMsbwDuvEeqwwNipfH27ew" name="getTypesBillet">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zMtC0DuvEeqwwNipfH27ew" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zMuQ8DuvEeqwwNipfH27ew" name="getTypesPiece">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zMuQ8TuvEeqwwNipfH27ew" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_VMkakDuwEeqwwNipfH27ew" name="IAdministrable">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VMkakTuwEeqwwNipfH27ew" name="verifierCoherence"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_X-AAYDuwEeqwwNipfH27ew" name="ICaisse">
+    <generalization xmi:type="uml:Generalization" xmi:id="_c_u04DuwEeqwwNipfH27ew" general="_VMkakDuwEeqwwNipfH27ew"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X-AAYTuwEeqwwNipfH27ew" name="getTotal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X-AAYjuwEeqwwNipfH27ew" name="afficherRenduMonnaie"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X-AAYzuwEeqwwNipfH27ew" name="retirerArgent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X-AAZDuwEeqwwNipfH27ew" name="ajouterArgent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X-AAZTuwEeqwwNipfH27ew" name="afficherContenu"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_m675wDuwEeqwwNipfH27ew" name="Caisse">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_m675wTuwEeqwwNipfH27ew" name="infoMonnaie" visibility="private" type="_wYywwDuvEeqwwNipfH27ew" isUnique="false"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1zfpcjuwEeqwwNipfH27ew" name="compartiment" type="_m68g0DuwEeqwwNipfH27ew" aggregation="composite" association="_1zfCYDuwEeqwwNipfH27ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Op7B8DwpEeqwwNipfH27ew"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Op9eMDwpEeqwwNipfH27ew" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_m68g0DuwEeqwwNipfH27ew" name="Compartiment">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_70oFcjuwEeqwwNipfH27ew" name="argent" type="_mi6tQDuuEeqwwNipfH27ew" association="_70neYDuwEeqwwNipfH27ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_70oFczuwEeqwwNipfH27ew"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_70oFdDuwEeqwwNipfH27ew" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_rVVBcDuwEeqwwNipfH27ew" client="_m675wDuwEeqwwNipfH27ew" supplier="_X-AAYDuwEeqwwNipfH27ew"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1zfCYDuwEeqwwNipfH27ew" memberEnd="_1zfpcjuwEeqwwNipfH27ew _1zgQgjuwEeqwwNipfH27ew">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1zfpcDuwEeqwwNipfH27ew" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1zfpcTuwEeqwwNipfH27ew" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1zgQgjuwEeqwwNipfH27ew" name="caisse" type="_m675wDuwEeqwwNipfH27ew" association="_1zfCYDuwEeqwwNipfH27ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_70neYDuwEeqwwNipfH27ew" memberEnd="_70oFcjuwEeqwwNipfH27ew _70osgDuwEeqwwNipfH27ew">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_70oFcDuwEeqwwNipfH27ew" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_70oFcTuwEeqwwNipfH27ew" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_70osgDuwEeqwwNipfH27ew" name="compartiment" type="_m68g0DuwEeqwwNipfH27ew" association="_70neYDuwEeqwwNipfH27ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9a9xIDuwEeqwwNipfH27ew"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_U5QnkDuxEeqwwNipfH27ew" name="CaisseBuilder"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_g8X0IDuxEeqwwNipfH27ew" name="AFondDeCaisseFactory">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_g8X0ITuxEeqwwNipfH27ew" name="creerFondDeCaisse"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r76q4DuxEeqwwNipfH27ew" name="FondDeCaisseFRFactory">
+    <generalization xmi:type="uml:Generalization" xmi:id="_r76q4TuxEeqwwNipfH27ew" general="_g8X0IDuxEeqwwNipfH27ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r77R8DuxEeqwwNipfH27ew" name="FondDeCaisseUSFactory">
+    <generalization xmi:type="uml:Generalization" xmi:id="_r77R8TuxEeqwwNipfH27ew" general="_g8X0IDuxEeqwwNipfH27ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ynYA0DuyEeqwwNipfH27ew" name="Comptable">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7D0osDuyEeqwwNipfH27ew" name="historiser"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_75P00DuyEeqwwNipfH27ew" name="afficherHistorique"/>
+  </packagedElement>
+</uml:Model>

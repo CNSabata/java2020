@@ -1,6 +1,10 @@
 package fr.aliptic.gestion.produits;
 
 import java.sql.Connection;
+<<<<<<< HEAD
+=======
+import java.sql.ResultSet;
+>>>>>>> dea54a61a5c8092fcad515f3f559765d2e229d54
 import java.util.List;
 
 
